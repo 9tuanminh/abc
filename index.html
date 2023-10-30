@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY BIRTHDAY</title>
+    <link rel="stylesheet" href="./assest/img/hopqua.png">
+    <link rel="stylesheet" href="./assest/style.css">
+    <link rel="stylesheet" href="./assest/img/banhkem.png">
+    <link rel="stylesheet" href="./assest/img/Happy Birthday Sound - tainhacchuong.top.mp3">
+    <link rel="stylesheet" href="./assest/img/sanhcuoigiatao.jpg">
+</head>
+<body>
+    <div class="main">
+            <div class="title"> Ấn vào hộp quà </div>
+            <img src="assest/img/hopqua.png" class="hopqua js-click" alt="hopqua">
+    </div>
+    <div class="suprise">
+        <div class="containpics">
+            <img class="img-ctp" src="assest/img/tm1.jpg" alt="">
+            <img class="img-ctp2" src="assest/img/tm2.jpg" alt="">
+        </div>
+        <div class="contain">
+            <img class="img-ctp" src="assest/img/ah1.jpg" alt="">
+            <img class="img-ctp2" src="assest/img/ah2.jpg" alt="">
+        </div>
+        <audio controls autoplay display="none" class="aud">
+            <source src="assest/img/khahat.mp3" type="audio/mpeg">
+        </audio>
+        <img src="assest/img/phao1.png" alt="" class="phao">
+        <img src="assest/img/phao1.png" alt="" class="phao delay2">
+        <img src="assest/img/phao1.png" alt="" class="phao delay">
+        <div alt="" class="phao delay3 hpbd">
+            Chàng trai của em chào em nhé , anh ấp ủ dự định này từ lâu vãi rồi , tròn 11 tháng anh sẽ gửi cho em mà anh ngu quá nên tốn quá nhiều thời gian , anh không ôn bài nhiều , người thì mệt mỏi lắm nhưng mỗi ngày cũng ráng làm 1 phần , suốt ngày chờ tin nhắn em thì chán quá nên anh quyết định sẽ làm bản thân mình bận rộn hơn , việc đầu tiên anh nghĩ đến là làm cái này cho em , anh biết anh làm em buồn nhiều dữ lắm , anh hối hận và dày vò bản thân nhiều lắm , từ giờ tới thi xong và sau khi thi xong , anh mong anh sẽ làm em thay đổi được suy nghĩ và tâm trạng của mình , sau cùng mong em ngủ đúng giờ , ăn đúng bữa , uống nước đều đặn và giữ gìn sức khoẻ để hoàn thành bài thi tốt nhá , anh yêu em 
+        </div>
+    </div>
+    <script>
+        const Clickbtn = document.querySelector('.js-click')
+        const ShowSup = document.querySelector('.suprise')
+        const ShowFire = document.querySelectorAll('.phao')
+        function Showmodal(){
+            ShowSup.classList.add('open')
+            for (const Showfire of ShowFire){
+                Showfire.classList.add('open')
+            }
+        }
+        Clickbtn.addEventListener('click' , Showmodal)
+
+    </script>
+    <script>
+        const Thoibtn = document.querySelector('.js-thoi')
+        const Open = document.querySelector('.konen')
+        const Close = document.querySelector('.banhkem')
+        function Showbanhkem(){
+            Open.classList.add('open')
+            Close.classList.add('close')
+        }
+        Thoibtn.addEventListener('click' , Showbanhkem)
+    </script>
+</body>
+</html>

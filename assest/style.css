@@ -1,0 +1,307 @@
+*{
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main{
+    background-color: rgb(245, 189, 232);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    background-color: rgb(201, 49, 178);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    color: rgb(48, 21, 0);
+    height: 50px;
+    line-height: 50px;
+    font-size: 25px;
+    display:flex ;
+    justify-content: center;
+}
+.hopqua{
+    width: 100%;
+    height: 50%;
+    margin-left: 50%;
+    margin-right: 50%;
+}
+.hopqua:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.suprise{
+    background-color: rgb(169, 169, 252);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    z-index: 3;
+    animation: background1 .5s ease-in-out infinite ;
+}
+.suprise.open{
+    display: flex;
+}
+.containpics{
+    height: 100%;
+    width: 50%;
+    background-color: azure;
+    position: relative;
+}
+.img-ctp{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slide 7s infinite ease;
+}
+.img-ctp2{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: slide2 7s infinite ease;
+}
+.contain{
+    height: 100%;
+    width: 50%;
+    background-color: azure;
+    position: relative;
+}
+.title2{
+    font-size: 20px;
+    color: blue;
+    background-color: #fff;
+    padding: 16px 16px;
+    border-radius: 28px;
+    margin: 0 32px;
+    line-height: 20px;
+    animation: fall ease .7s infinite;
+}
+.banhkem{
+    width: 200px;
+    max-height: 200px;
+    margin-top: 8px;
+}
+.banhkem.close{
+    display: none;
+}
+.konen{
+    width: 200px;
+    max-height: 200px;
+    margin-top: 8px;
+    display: none;
+}
+.konen.open{
+    display: block;
+    animation: rotation 3s infinite linear;
+}
+.message{
+    background-color: black;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-left: 32px;
+    margin-right: 32px;
+    padding: 16px 16px;
+    line-height: 25px;
+    border-radius: 25px;
+    animation: change ease 1s infinite;
+}
+.aud{
+   height: 20px;
+   z-index: 999;
+   margin-top: 4px;
+   position: fixed;
+   bottom: 8px;
+}
+.phao{
+    display: none;
+    z-index: 99;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: phao ease-in 15s infinite;
+}
+.hpbd{
+    width: 50%;
+    height: fit-content;
+    z-index: 1001;
+    background-color: rgb(255, 185, 185);
+    text-align: center;
+    border-radius: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    margin-top: 20%;
+    opacity: .8;
+}
+.delay{
+    animation: phao ease-in 10s infinite;
+    z-index: 995;
+}
+.delay2{
+    animation: phao ease-in 12s infinite;
+}
+.delay3{
+    animation: hpbd ease-in 15s infinite;
+}
+.phao.open{
+    display: block;
+}
+.thoinen{
+    font-size: 16px;
+    line-height: 23px;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 196, 0);
+    margin: 5px 5px;
+    padding: 4px 12px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+.thoinen:hover{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: #ccc;
+}
+@keyframes fall {
+    from{
+        transform: scaleY(1.2);
+        background-color: black;
+        color: #fff;
+    }
+    to{
+        transform: scaleY(1);
+        background-color: rgb(255, 238, 0);
+        color: rgb(9, 0, 60);
+    }
+}
+@keyframes rotation {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(2turn);
+    }
+}
+@keyframes change {
+    from{
+        background-color: black;
+        color: #fff;
+        transform: scaleX(1.1);
+    }
+    to{
+        background-color: rgb(255, 136, 0);
+        color: rgb(255, 255, 255);
+        transform: scaleX(1);
+    }
+}
+@keyframes background1 {
+    from{
+        background-color: rgb(255, 190, 246);
+    }
+    to{
+        background-color: rgb(201, 213, 255);
+    }
+}
+/*@media (min-width: 741px) and (max-width: 1023px) {
+    .containpics{
+        background-size: contain;
+    }
+}*/
+@media (max-width: 1023px) {
+    .suprise{
+        flex-wrap: wrap;
+    }
+    .contain{
+        width: 100%;
+        height: 50%;
+    }
+    .containpics{
+        width: 100%;
+        height: 50%;
+    }
+    .title2{
+        padding: 4px 8px;
+        font-size: 16px;
+    }
+    .thoinen{
+        position:fixed;
+        bottom:120px;
+        left:0;
+    }
+    .aud{
+        position:fixed;
+        bottom:120px;
+        right:0;
+        width:108px;
+    }
+    .hpbd{
+        width: 95%;
+    }
+}
+@keyframes slide {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+@keyframes slide2 {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes phao {
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(100%);
+    }
+}
+@keyframes hpbd {
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(120%);
+    }
+}
+@keyframes rotation 
+{
+    from{
+        transform: rotate3d(0);
+    }   
+    to{
+        transform: rotate3d(1, 1, 1, 45deg);
+    } 
+}
